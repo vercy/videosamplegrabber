@@ -1,2 +1,2 @@
 # videosamplegrabber
-A mini library for streaming video streams into .net managed context
+A mini library for streaming video sources into .net managed context
