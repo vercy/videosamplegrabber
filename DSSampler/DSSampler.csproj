@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B1721539-A0AB-4BF3-9F62-90B9CE5C6217}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DSSampler</RootNamespace>
+    <AssemblyName>DSSampler</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DSConfig.cs" />
+    <Compile Include="DShowNET\DsBugWO.cs" />
+    <Compile Include="DShowNET\DsControl.cs" />
+    <Compile Include="DShowNET\DsCore.cs" />
+    <Compile Include="DShowNET\DsDevice.cs" />
+    <Compile Include="DShowNET\DsDVD.cs" />
+    <Compile Include="DShowNET\DsExtend.cs" />
+    <Compile Include="DShowNET\DsUtils.cs" />
+    <Compile Include="DShowNET\DsUuids.cs" />
+    <Compile Include="DShowNET\QEdit.cs" />
+    <Compile Include="DsSampler.cs" />
+    <Compile Include="InteractiveDSConfig.cs" />
+    <Compile Include="ISampleProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SamplerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SamplerDialog.Designer.cs">
+      <DependentUpon>SamplerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SamplerStats.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SamplerDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SamplerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
